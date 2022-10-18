@@ -19,7 +19,7 @@ $ make test
 ```
 ### Building and running the code
 
-For building the actual code, run `make` inside the source directory. This will build the binaries for `bdlop` (commitment); `bgv` and `ghl` (encryption); `pior`, `pibdn` and `linear` for proofs.
+For building the actual code, run `make` inside the source directory. This will build the binaries for `bdlop` (commitment); `bgv` and `ghl` (encryption); `pior`, `pibdn` and `linear` for proofs for two values of N, as described in the paper.
 
 The binaries respectively implement the commitment scheme, the distributed BGV/GHL cryptosystems, and the three zero-knowledge proofs. Tests and benchmarks are included for each of them, such that they can be used independently. NFLlib is quite memory-hungry due to being a template library, so we recommend to adjust the stack size with `ulimit -s unlimited` to avoid crashing in the largest benchmarks.
 

@@ -42,17 +42,31 @@ using namespace std;
 /* Bound for the OR proof. */
 #define BOUND_O     (18662)
 
-/* Large modulus. */
-#define PRIMEQ      "5070602400912917605986813104129"
-/* Parameter for encoding messages modulo q. */
-#define DELTA       2251799813685248
-#define DELTA_R     (DELTA-565252)
-/* Sigma for the boundness proof. */
-#define SIGMA_B     (355504921678021018857242624.0)
-/* Norm bound for boundness proof. */
-#define BOUND_B     "11649185273545392745914126303232"
-/* Bound for Distributed Decryption. */
-#define BOUND_D     "2296535283433303141439833636864"
+#if USERS == 1024
+    /* Large modulus. */
+    #define PRIMEQ      "316912650057057350374175870977"
+    /* Parameters for encoding messages modulo q. */
+    #define DELTA       562949953421312
+    #define DELTA_R     (DELTA-139266)
+    /* Sigma for the boundness proof. */
+    #define SIGMA_B     (11906898151735774419091456.0)
+    /* Norm bound for boundness proof. */
+    #define BOUND_B     "144379862274704472782405632"
+    /* Bound for Distributed Decryption. */
+    #define BOUND_D     "1155038898197635782259245056"
+#elif USERS == 10000
+    /* Large modulus. */
+    #define PRIMEQ      "2658455991569831745807614120560865281"
+    /* Parameter for encoding messages modulo q. */
+    #define DELTA       2251799813685248
+    #define DELTA_R     (DELTA-565252)
+    /* Sigma for the boundness proof. */
+    #define SIGMA_B     (355504921678021018857242624.0)
+    /* Norm bound for boundness proof. */
+    #define BOUND_B     "11649185273545392745914126303232"
+    /* Bound for Distributed Decryption. */
+    #define BOUND_D     "818235810536127948211699224848367616"
+#endif
 
 namespace params {
     using poly_p = nfl::poly_from_modulus<uint32_t, DEGREE, 30>;
