@@ -1,6 +1,6 @@
-# Lattice-based Anonymous Broadcast
+# Anonymous Broadcast from Lattice Assumptions
 
-Code accompannying the paper "Lattice-based Anonymous Broadcast"
+Code accompannying the paper "Anonymous Broadcast from Lattice Assumptions"
 
 Depedencies are the [NFLlib](https://github.com/quarkslab/NFLlib) and [FLINT](https://flintlib.org/doc/) 2.8 libraries.
 NFLLib is already included in this repository, but instructions for installing its dependencies can be found in the link above.
